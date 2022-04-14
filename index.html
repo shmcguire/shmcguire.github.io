@@ -28,6 +28,10 @@
          display:none; border: 1px solid black; padding: 10px
       }
 
+      .bio {
+         display:none
+      }
+
       .popout {
          color: rgba(42, 99, 45, 0.925);
          cursor: pointer;
@@ -46,30 +50,30 @@
 <body>
 <br><br>
 
-   <table width = "1200" align="center" style = "border: 1px solid #666; padding-right:35px; border-bottom: 0px">
+   <table width = "800" align="center" style = "border: 1px solid #666; padding-right:35px">
       <tr>
-	<td  width="75%" valign="top"> 
-            <br>
-            <dl>
-            <dd><h3><b> Sam McGuire </b></h3></dd>
-	<td width="25%" valign="top">
-            <img width="175px" src="me.jpg">
-	</td>
-      </tr>
-   </table>
-   <table width = "1200" align="center" style = "border: 1px solid #666; padding-right:35px; border-top: 0px">
-	<tr> 
-	<td>
-            <dd>
-		    
-	    </dd>
-            <br>
-
-            <dd>
-		    
-            </dd>
-
-            </dl>
+         <td  width="75%" valign="top"> 
+                  <dl>
+                  <dd><h3><b> Sam McGuire </b></h3></dd>
+                  <br>
+                  <dd>
+                     
+                  [<a onclick='$("#bio").toggle()' class="popout">bio</a>]
+                  [<a onclick='$("#dao").toggle(); $("#francis").toggle()' class="popout">dao and i // francis</a>]
+                  <div id="bio" class="bio">
+                  <br>
+                     2007-2014 Sudbury Valley School<br>
+                     2014-2018 BS Computer Science, UMass Amherst<br>
+                     2018-2022 MS Computer Science, UC San Diego<br>
+                  </div>
+                  </dd>
+         <td width="25%" valign="top">
+                  <div id="francis">
+                     <img width="175px" height="183px" src="francis.jpg">
+                  </div>
+                  <div id="dao" class="bio">
+                     <img width="175px" src="me.jpg">
+                  </div>
          </td>
       </tr>
    </table>
@@ -79,8 +83,8 @@
          <td width = "1200", padding = "3px">
             <br>
 	    <br>
-            <b> Academic articles. </b> Sorted in decreasing chronological order.
-	    Authors listed alphabetically (per TCS tradition), unless marked with an astericks (*).
+            <b> Academic articles. </b> Click on title to view abstract. Sorted in decreasing chronological order.
+	    Authors listed alphabetically (per TCS tradition).
             <ol>
 		<li>
 		<a onclick='$("#sigact_abstract").toggle()' class="popout"><b>Models of computation between decision trees and communication.</b></a>
@@ -90,7 +94,11 @@
                   <br>
                   <div id='sigact_abstract' class="abstract">
 			We survey recent work on the communication complexity of functions $F : \{0, 1\}^n \times \{0, 1\}^n \to \{0, 1\}$ 
-			of the form $f (x \circ y)$ where $f : \{0, 1\}^n → \{0, 1\}$ is a total boolean function and $\circ$ represents either bit-wise XOR 			or bit-wise AND. This naturally leads to the study of models of computation that are, in a sense, 'between' communication complexity 			and decision tree complexity. These classes of functions capture a rich class of communication problems while simultaneously being 			amenable to analysis with minimal assumptions about the structure of $f$. This flexibility has shed new light on central topics in 			communication complexity, including restricted cases of the log-rank conjecture and the query-to-communication lifting methodology.
+			of the form $f (x \circ y)$ where $f : \{0, 1\}^n → \{0, 1\}$ is a total boolean function and $\circ$ represents either bit-wise XOR 
+         or bit-wise AND. This naturally leads to the study of models of computation that are, in a sense, 'between' communication complexity 
+         and decision tree complexity. These classes of functions capture a rich class of communication problems while simultaneously being 
+         amenable to analysis with minimal assumptions about the structure of $f$. This flexibility has shed new light on central topics in 			
+         communication complexity, including restricted cases of the log-rank conjecture and the query-to-communication lifting methodology.
 		</li>
 		<br>
 
@@ -104,7 +112,7 @@
                   [<a href="talks/STOC21_talk_full.pdf">slides</a>]
                   [<a href="talks/STOC21_poster.pdf">poster</a>]
                   [<a href="https://www.youtube.com/watch?v=9HyK8dgHQjQ">video@STOC</a>]
-		  [<a onclick='$("#ADT_logn_simple").toggle()' class="popout">test</a>]			
+		  <!-- [<a onclick='$("#ADT_logn_simple").toggle()' class="popout">test</a>]			 -->
                   <br>
                   <div id='ADT_logn_abstract' class="abstract">
 		Let $f: \{0,1\}^n \to \{0, 1\}$ be a boolean function, and let
@@ -134,12 +142,12 @@
 		$f:\{0,1\}^n \to \mathbb{R}$ 
 		with a larger range.
 			</div>
-			<div id='ADT_logn_simple' class="abstract">
+			<!-- <div id='ADT_logn_simple' class="abstract">
 		We show that if a function $f: \{0, 1\}^n \to \{0, 1\}$ can be represented 
 		as a multilinear polynomial $f(x_1, ..., x_n) = \sum_{i = 1}^r \alpha_i \prod_{j \in S_i} x_j$,
 		then the set system $\mathcal{F} = \{S_1, ..., S_r\}$ then there is a set $T \subseteq \{1, 2, ..., n\}$
 		with $|T| = (log r)^{O(1)}$ so that $T$ has non-empty intersection with every $S_i \in \mathcal{F}$.
-			</div>
+			</div> -->
 		</li>
 
 	     <!--     ###############################################       -->
@@ -210,8 +218,7 @@
       <tr>
          <td width = "1200">
             <br>
-            <b> Teaching experience. </b> I have had the good fortune of TAing the following classes over my
-	    career thus far:
+            <b> Teaching experience. </b> 
             <ul>
                <li> Winter 2022: CSE 202 Algorithms. UCSD. Teaching Assistant.
                <li> Fall 2020: CSE 202 Algorithms. UCSD. Teaching Assistant.
