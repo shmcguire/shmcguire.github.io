@@ -28,6 +28,10 @@
          display:none; border: 1px solid black; padding: 10px
       }
 
+      .poem {
+         display:none; border-top: 1px solid black; border-bottom: 1px solid black; padding: 10px
+      }
+
       .bio {
          display:none
       }
@@ -50,22 +54,18 @@
 <body>
 <br><br>
 
-   <table width = "800" align="center" style = "border: 1px solid #666; padding-right:35px">
+   <table width = "800" align="center" style = "border: 1px solid #666; padding-right:35px; border-bottom: 0px">
       <tr>
          <td  width="75%" valign="top"> 
                   <dl>
+                  <br>
                   <dd><h3><b> Sam McGuire </b></h3></dd>
                   <br>
-                  <dd>
-                     
-                  [<a onclick='$("#bio").toggle()' class="popout">bio</a>]
-                  [<a onclick='$("#dao").toggle(); $("#francis").toggle()' class="popout">dao and i // francis</a>]
-                  <div id="bio" class="bio">
                   <br>
-                     2007-2014 Sudbury Valley School<br>
-                     2014-2018 BS Computer Science, UMass Amherst<br>
-                     2018-2022 MS Computer Science, UC San Diego<br>
-                  </div>
+                  <dd>
+                  [<a onclick='$("#bio").toggle()' class="popout">bio</a>]   
+                  [<a onclick='$("#edu").toggle()' class="popout">education</a>]
+                  [<a onclick='$("#dao").toggle(); $("#francis").toggle()' class="popout">dao and i // francis</a>]
                   </dd>
          <td width="25%" valign="top">
                   <div id="francis">
@@ -74,6 +74,31 @@
                   <div id="dao" class="bio">
                      <img width="175px" src="me.jpg">
                   </div>
+         </td>
+      </tr>
+   </table>
+   <table width = "800" align="center" style = "border: 1px solid #666; padding-right:35px; border-top: 0px">
+      <tr>
+         <td  width="75%" valign="top"> 
+            <dd>
+            <div id="bio" class="bio">
+               I am a computer scientist based out of western Massachusetts and I recently finished my MS in Computer Science at UC San Diego. 
+               I had previously been working on a PhD at UCSD and doing research in theoretical computer science, but decided to leave in March '22 for personal reasons. 
+               Before my PhD work, I got a BS from UMass Amherst. 
+               <br>
+               <br>
+               My academic interests include computational complexity, combinatorics, probability and machine learning. 
+               I am also interested in <a href="https://www.fivecolleges.edu/academics/logic-program">logic</a>, music, basketball and ceramics.
+               I usually code in Python or Haskell and sometimes C. I'm currently looking for a remote position in industry. 
+            </div>
+            <div id="edu" class="bio">
+            <br>
+               2007-2014 Sudbury Valley School<br>
+               2014-2018 BS Computer Science, UMass Amherst<br>
+               2018-2022 MS Computer Science, UC San Diego<br>
+            </div>
+            </dd>
+         <td width="25%" valign="top">
          </td>
       </tr>
    </table>
@@ -240,7 +265,8 @@
          <ul>
             <li> <a href="https://soundcloud.com/sam_holmes">some old music</a>
             <li> <a onclick='$("#poem").toggle()' class="popout">a poem</a>
-            <div align="center" id='poem' class="abstract">
+            <div align="center" id='poem' class="poem">
+               <br>
                You could spend your entire life Attempting<br>
                to provide an adequate context For what <br>
                you will say next So that the people<br> 
@@ -257,6 +283,8 @@
                items on the inside of the waterfall <br>
                perpetually unable to hear the<br>
                conversations of its neighbors
+               <br>
+               <br>
             <li> <a href="fisher.pdf"><i>Capitalist Realism</i></a>
             <li> <a href="https://www.youtube.com/watch?v=6CeWVSSeH1E"> Pay Not Play Not </a>
             </div>
